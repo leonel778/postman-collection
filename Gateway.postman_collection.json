@@ -680,15 +680,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8078/wallet/30",
+					"raw": "http://localhost:8101/v1/wallet/phone/948296729",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8078",
+					"port": "8101",
 					"path": [
+						"v1",
 						"wallet",
-						"30"
+						"phone",
+						"948296729"
 					]
 				}
 			},
@@ -736,6 +738,27 @@
 			"response": []
 		},
 		{
+			"name": "getTradingId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8075/v1/getTradingById/62968d5be68c9446ad359e86",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8075",
+					"path": [
+						"v1",
+						"getTradingById",
+						"62968d5be68c9446ad359e86"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "getBootcoin",
 			"request": {
 				"method": "GET",
@@ -756,6 +779,119 @@
 							"key": "id",
 							"value": "62964588e68c9446ad359e69"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTrade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amountChange\": 15,\r\n    \"paymentType\": \"wallet\",\r\n    \"bootcoindId\": \"62964588e68c9446ad359e69\",\r\n    \"phoneNumber\": 987345654,\r\n    \"state\": \"open\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8075/v1/createTrading",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8075",
+					"path": [
+						"v1",
+						"createTrading"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTradingOpen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8075/v1/getAllTrading?state=open",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8075",
+					"path": [
+						"v1",
+						"getAllTrading"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "open"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "acceptTrade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tradingId\": \"62968d5be68c9446ad359e86\",\r\n    \"bootcoinId\": \"6296f322b04fa96412420d8a\",\r\n    \"phoneNumber\": 987345322\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8076/v1/acceptTrade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8076",
+					"path": [
+						"v1",
+						"acceptTrade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "operationWallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 20.0,\r\n    \"sourcePhoneNumber\": 954521687,\r\n    \"destinationPhoneNumber\": 948296729,\r\n    \"sourceWalletId\": \"\",\r\n    \"destinationWalletId\": \"\",\r\n    \"message\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8101/v1/operationWallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"v1",
+						"operationWallet"
 					]
 				}
 			},
