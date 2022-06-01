@@ -1,0 +1,765 @@
+{
+	"info": {
+		"_postman_id": "23388d71-5a66-44ad-88f0-5602f1cf9284",
+		"name": "Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20789591"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": []
+		},
+		{
+			"name": "getAllProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8097/api/product/v1/products/getAllProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"product",
+						"v1",
+						"products",
+						"getAllProduct"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAllProduct",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8097/api/product/v1/products/getAllProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8097",
+							"path": [
+								"api",
+								"product",
+								"v1",
+								"products",
+								"getAllProduct"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"productId\": \"627565638e1580ec83b69c7d\",\n        \"type\": \"Activo\",\n        \"productName\": \"Credit Card\",\n        \"commissionMaintenance\": null,\n        \"transactionLimit\": \"\"\n    },\n    {\n        \"productId\": \"6279910287e2c75eab69eecf\",\n        \"type\": \"Activo\",\n        \"productName\": \"Empresarial\",\n        \"commissionMaintenance\": null,\n        \"transactionLimit\": \"\"\n    },\n    {\n        \"productId\": \"627b07a94b699dd4b75762ca\",\n        \"type\": \"Pasivo\",\n        \"productName\": \"Cuenta Ahorro\",\n        \"commissionMaintenance\": null,\n        \"transactionLimit\": \"15\"\n    },\n    {\n        \"productId\": \"627b082a4b699dd4b75762cc\",\n        \"type\": \"Pasivo\",\n        \"productName\": \"Cuenta corriente\",\n        \"commissionMaintenance\": null,\n        \"transactionLimit\": \"1000\"\n    },\n    {\n        \"productId\": \"627b08874b699dd4b75762ce\",\n        \"type\": \"Pasivo\",\n        \"productName\": \"Plazo fijo\",\n        \"commissionMaintenance\": null,\n        \"transactionLimit\": \"1\"\n    },\n    {\n        \"productId\": \"627b08f54b699dd4b75762d0\",\n        \"type\": \"Activo\",\n        \"productName\": \"Personal\",\n        \"commissionMaintenance\": null,\n        \"transactionLimit\": \"\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8092/v1/products/getProduct/627565638e1580ec83b69c7d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"v1",
+						"products",
+						"getProduct",
+						"627565638e1580ec83b69c7d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllAccount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8097/api/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": \"627565638e1580ec83b69c7d\",\r\n    \"type\": \"Activo\",\r\n    \"productName\": \"Credit Card\",\r\n    \"commission\": \"1\",\r\n    \"transactionLimit\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8097/api/product/v1/products/updateProduct/627565638e1580ec83b69c7d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"product",
+						"v1",
+						"products",
+						"updateProduct",
+						"627565638e1580ec83b69c7d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCreditProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8097/api/credit/v1/creditProduct/627422eb432d34d63b6920a0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"credit",
+						"v1",
+						"creditProduct",
+						"627422eb432d34d63b6920a0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTransactionCreditProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8097/api/credit/v1/creditTransaction/627422eb432d34d63b6920a0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"credit",
+						"v1",
+						"creditTransaction",
+						"627422eb432d34d63b6920a0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCredit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8097/api/credit/v1/credits/62773b4d8e1580ec83b69cda",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"credit",
+						"v1",
+						"credits",
+						"62773b4d8e1580ec83b69cda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAccount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8097/api/account/627b763fa271165c4105b2e8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"account",
+						"627b763fa271165c4105b2e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCredit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditId\": \"62773b4d8e1580ec83b69cda\",\r\n    \"amountUsed\": 180.0,\r\n    \"limitCredit\": 500.0,\r\n    \"creditAvailable\": 2321.0,\r\n    \"numberCredit\": \"2344546456456546456\",\r\n    \"type\": \"A\",\r\n    \"productId\": \"627565638e1580ec83b69c7d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8097/api/credit/v1/credits/62773b4d8e1580ec83b69cda",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"credit",
+						"v1",
+						"credits",
+						"62773b4d8e1580ec83b69cda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccount",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\": \"3333222233334444\",\r\n    \"amount\": 1500,\r\n    \"dateOpen\": \"2022-05-05\",\r\n    \"amounttype\": \"soles\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8097/api/account/update/627c087e73962e14b09a1982",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"account",
+						"update",
+						"627c087e73962e14b09a1982"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPayment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 10,\r\n    \"creditId\": \"62773b4d8e1580ec83b69cda\",\r\n    \"accountId\": \"627c080573962e14b09a1980\",\r\n    \"date\": \"2022-05-17\",\r\n    \"type\": \"Pago Credit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8097/api/payment/v1/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"payment",
+						"v1",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transferAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferFrom\": \"627b763fa271165c4105b2e8\",\r\n    \"transferTo\": \"627c080573962e14b09a1980\",\r\n    \"amount\": 10,\r\n    \"date\": \"2022-05-17\",\r\n    \"type\": \"Tranferencia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8097/api/transfer/v1/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"transfer",
+						"v1",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCharge",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditId\": \"62773b4d8e1580ec83b69cda\",\r\n    \"amount\": 10,\r\n    \"type\": \"Compra\",\r\n    \"date\": \"2022-05-19\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8097/api/payment/v1/payment/charge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"payment",
+						"v1",
+						"payment",
+						"charge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 1008,\r\n    \"date\": \"2022-05-09\",\r\n    \"type\": \"A\",\r\n    \"creditId\": \"627422eb432d34d63b6920a0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8097/api/transaction/v1/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"transaction",
+						"v1",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTransactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8097/api/transaction/v1/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"transaction",
+						"v1",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCountTransactionByType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8097/api/transaction/v1/transaction/count?accountId=627c080573962e14b09a1980&typ=Retiro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"api",
+						"transaction",
+						"v1",
+						"transaction",
+						"count"
+					],
+					"query": [
+						{
+							"key": "accountId",
+							"value": "627c080573962e14b09a1980"
+						},
+						{
+							"key": "typ",
+							"value": "Retiro"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retiroBalanceAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_id\": \"627c080573962e14b09a1980\",\r\n    \"amount\": 50.0,\r\n    \"type\": \"Retiro\",\r\n    \"date\": \"2022-05-18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/updateAmountRest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"updateAmountRest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lastMovement",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/v1/lastMovementCard?cardId=4556634783428934&creditId=6275a2954a6cc662fe6ee6a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"v1",
+						"lastMovementCard"
+					],
+					"query": [
+						{
+							"key": "cardId",
+							"value": "4556634783428934"
+						},
+						{
+							"key": "creditId",
+							"value": "6275a2954a6cc662fe6ee6a5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "operationCard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 80,\r\n    \"cardId\": \"4556634783428934\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/operationCard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"operationCard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cardAssociation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 299,\r\n    \"cardId\": \"4556634783428934\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/cardAssociation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"cardAssociation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lastMovementCredit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/v1/lastMovement/6275a2954a6cc662fe6ee6a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"v1",
+						"lastMovement",
+						"6275a2954a6cc662fe6ee6a5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAccountPrincipal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardId\": \"4556634783428934\",\r\n    \"cardLabel\": \"CP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/amountcptd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"amountcptd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createWallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\": \"4857494849731173\",\r\n    \"amount\": 11,\r\n    \"amounttype\": \"soles\",\r\n    \"productId\": \"62833f4d9a36154aa2e6e25c\",\r\n    \"customerId\": \"62833f4d9a36154aa2e6e25c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8078/v1/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8078",
+					"path": [
+						"v1",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWalletId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8078/wallet/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8078",
+					"path": [
+						"wallet",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8101/v1/phone/954521687",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8101/v1/phone/954521687",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"v1",
+						"phone",
+						"954521687"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8101/v1/getAllWallet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8101/v1/getAllWallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"v1",
+						"getAllWallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBootcoin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8076/v1/getBootCoin?id=62964588e68c9446ad359e69",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8076",
+					"path": [
+						"v1",
+						"getBootCoin"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62964588e68c9446ad359e69"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
